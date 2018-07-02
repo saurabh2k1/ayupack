@@ -5,5 +5,73 @@
   "paginate": {
     "default": 10,
     "max": 50
+  },
+  "authentication": {
+    "secret": "1d2d18ae827170acd3d7451f6210e023e229d52d4302978fd48f1ec8f92877a64671bc437099a93ad8d4baf328cbac57883037f2415cb23f03e5ebba3170cac48debfa5d78a3b9af9e814d483ba4c13a5cf82e9535ff0a8c248b4c26b15b4e1315f8dd846a675f6aeb5763cc0782e1d8162764a1d08d9dfe300d22f6e3009c0904c357f9c56f905d2f63b3d8863113036da82bcb2ded6b2861c209b1bc3fad24a22067d08402b6584ebe37254e8f821ff0ec9afa555220ff5f671c8269a47c009825a517fb947a581f15ac22e006dc919bb46234e0001a2cba8aa7880a06200d9402a27dc1292ddc4b9fbe5038b1dc3f702b6cde4164b64564746e68a17602af",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  },
+  "mysql": {
+    "client": "mysql2",
+    "connection": {
+      "host" : "127.0.0.1",
+      "user" : "root",
+      "password" : "pll123",
+      "database" : "ayupack"
+    }
   }
 }

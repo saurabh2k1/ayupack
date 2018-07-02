@@ -8,8 +8,8 @@
     "feathers"
   ],
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Saurabh Sharma",
+    "email": "saurabh2k1@gmail.com"
   },
   "contributors": [],
   "bugs": {},
@@ -28,6 +28,10 @@
     "mocha": "mocha test/ --recursive --exit"
   },
   "dependencies": {
+    "@feathersjs/authentication": "^2.1.6",
+    "@feathersjs/authentication-jwt": "^2.0.1",
+    "@feathersjs/authentication-local": "^1.2.1",
+    "@feathersjs/authentication-oauth2": "^1.1.0",
     "@feathersjs/configuration": "^1.0.2",
     "@feathersjs/errors": "^3.3.0",
     "@feathersjs/express": "^1.2.3",
@@ -35,7 +39,13 @@
     "@feathersjs/socketio": "^3.2.2",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
+    "feathers-knex": "^3.3.0",
     "helmet": "^3.12.1",
+    "knex": "^0.15.0",
+    "moment": "^2.22.2",
+    "mysql2": "^1.5.3",
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth20": "^1.0.0",
     "serve-favicon": "^2.4.5",
     "winston": "^3.0.0"
   },
